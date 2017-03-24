@@ -68,7 +68,7 @@ describe AccessGranted::Policy do
         klass = Class.new do
           include AccessGranted::Policy
 
-          def configure(user)
+          def configure
             role :member do
               can :manage, FakePost
             end
